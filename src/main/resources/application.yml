@@ -1,0 +1,12 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://139.198.187.250:3306/cbd_bak?useUnicode=true&characterEncoding=utf8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource #这里使用默认的hikari有点问题，用自己集成的吧
+mybatis-plus:
+  type-aliases-package: com.example.pojo
+#  type-handlers-package: com.example.mapper.typehandler
