@@ -2,6 +2,7 @@ package com.example;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.example.controller.dto.QueryPage;
 import com.example.mapper.DepartmentMapper;
 import com.example.mapper.EmployeeMapper;
@@ -61,6 +62,12 @@ class ApplicationTests {
         QueryPage<Employee> queryPage = new QueryPage<>();
         IPage page = baseInterface.findByPage(queryPage);
         System.out.println(page);
+    }
+
+    @Test
+    void pageTest(){
+        IPage<Department> departmentIPage = departmentMapper.selectList(new Page(2, 1));
+        System.out.println(departmentIPage.getRecords());
     }
 
 }

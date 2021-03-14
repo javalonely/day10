@@ -16,4 +16,6 @@ public class Department extends BaseEntity implements Serializable {
     private Integer deptno;
     private String dname;
     private String loc;
+    //空
+    private String comment;
 }

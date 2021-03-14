@@ -9,4 +9,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource #这里使用默认的hikari有点问题，用自己集成的吧
 mybatis-plus:
   type-aliases-package: com.example.pojo
+logging:
+  level:
+    root: debug
 #  type-handlers-package: com.example.mapper.typehandler

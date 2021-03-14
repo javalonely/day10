@@ -3,7 +3,7 @@
 <mapper namespace="com.example.mapper.DepartmentMapper">
 
     <select id="selectList" resultType="com.example.pojo.Department">
-        select * from dept_bak limit 1
+        select * from dept_bak
     </select>
 
 

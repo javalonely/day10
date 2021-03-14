@@ -1,5 +1,6 @@
 package com.example.mapper;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.example.pojo.Department;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -19,6 +20,6 @@ public interface DepartmentMapper {
 
     List<Department> execute(@Param("sql") String sql);
 
-    List<Department> selectList();
+    IPage<Department> selectList(IPage page);
 
 }
